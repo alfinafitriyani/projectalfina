@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>program operator assigment</title>
+    </head>
+    <body>
+        <h1>program operator assignment</h1>
+        <script>
+            //operator assigment
+            let o = 4;
+            let p = 10;
+            let q = 6;
+            let tambah = o += p;
+            let kurang = o -= p;
+            let bagi = p /= c;
+            let kali = q *= b;
+            let modulus = o %= c;
+
+            //berikut program menampilkan operator assignment pada WEB
+            document.write("<p>Menampilkan hasil dari Oprator Assigment adalah sebagai berikut :" +"<br></br></p>");
+            document.write(tambah+"<br>"+kurang+"<br>"+bagi+"<br>"+kali+"<br>"+modulus);
+        </script>
+    </body>
+</html>

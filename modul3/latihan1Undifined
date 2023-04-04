@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <title>Contoh Program Tipe Data Undefined</title>
+</head>
+<body>
+    <h1>Program Tipe Data Undefined HTML</h1>
+    <p id="results"></p>
+    <script>
+        //deklarasi variabel undefined
+        let Data;
+
+        //menampilkan tipe data undefined pada halaman WEB
+        document.getElementById("results").innerHTML ="Tipe data dari variabel Data adalah : " +typeof Data;
+    </script>
+</body>
+</html>
