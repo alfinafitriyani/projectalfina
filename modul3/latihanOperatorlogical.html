@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>program operator logical</title>
+    </head>
+    <body>
+        <h1>program operator logical</h1>
+        <script>
+            //operator logical
+            let a = 14;
+            let b = 10;
+            let and1 = a < 19 && b > 13; //logika menghasilkan true apabila semua kondisi terpenuhi
+            let and2 = a > 19 && b > 13;
+            let or1 = a < 19 || b > 13; //logika akan menghasilkan nilai true apa bila ada salah satu kondisi terpenuhi
+            let or2 = a > 19 || b > 13;
+            let not1 = !(a>19); //digunakan untuk membalikkan suatu kondisi
+            let not2 = !(a < 19 && b >13);
+
+            //berikut program menampilkan operator logical pada WEB
+            document.write("<p>Menampilkan hasil dari Operator Logical adalah sebagai berikut :" +"<br></br></p>");
+            document.write(and1+"<br>"+and2+"<br>"+or1+"<br>"+or2+"<br>"+not1+"<br>"+not2);
+        </script>
+    </body>
+</html>

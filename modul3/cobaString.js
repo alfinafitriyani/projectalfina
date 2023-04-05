@@ -7,4 +7,4 @@ console.log(moreGreet);
 const MyName = "Alfina";
 console.log(`Hello, my name is ${MyName}`);
 
-/* output : Hello, my name is Alfina. */
+/* output : Hello, my name is Alfina. */ 
