@@ -1,23 +1,27 @@
 <html>
     <head>
-        <title>program operator assigment</title>
+        <title>program tipe data number</title>
     </head>
     <body>
-        <h1>program operator assignment</h1>
+        <h1>Program Tipe Data Numbers HTML</h1>
+        <p id="description"></p>
         <script>
-            //operator assigment
-            let o = 4;
-            let p = 10;
-            let q = 6;
-            let tambah = o += p;
-            let kurang = o -= p;
-            let bagi = p /= c;
-            let kali = q *= b;
-            let modulus = o %= c;
+            //deklarasi tipe data numbers
+            var a = 9;
+            var b = 6;
+            var Tambah = a + b;
+            var Kurang = a - b;
+            var Bagi = a / b;
+            var Kali = a * b;
+            var Persen = a % b;
 
-            //berikut program menampilkan operator assignment pada WEB
-            document.write("<p>Menampilkan hasil dari Oprator Assigment adalah sebagai berikut :" +"<br></br></p>");
-            document.write(tambah+"<br>"+kurang+"<br>"+bagi+"<br>"+kali+"<br>"+modulus);
+            //menampilkan tipe data numbers pada halaman WEB
+            document.getElementById("description").innerHTML="Menampilkan hasil dari tipe data (" + typeof a + ") adalah sebagai berikut";
+            document.write(Tambah + "<br>");
+            document.write(Kurang + "<br>");
+            document.write(Bagi + "<br>");
+            document.write(Kali + "<br>");
+            document.write(Persen + "<br>");
         </script>
     </body>
 </html>
