@@ -1,26 +1,19 @@
-<html>
-    <head>
-        <title> Program if/else statement</title>
-    </head>
-    <body>
-        <h1>Program If/Else Statement</h1>
-        <p id="description"></p>
-        <script>
-            //variabel
-            let bahasa = "Jepang";
-            let greeting = "Hi!";
+<html lang="en">
+<head>
+    <title>Percabangan if/else</title>
+</head>
+<body>
+    <script>
+        var password = prompt("Password:");
 
-            if (bahasa === "English") {
-                greeting = "Hi!";
-            } else if (bahasa === "Hawai") {
-                greeting = "Aloha";
-            } else if (bahasa === "Jepang") {
-                greeting = "Konnichiwa";
-            }
-            
-            //menampilkan output
-            document.getElementById("description").innerHTML = greeting;
-        </script>
-    </body>
+        if(password == "alfinafitriyani"){
+            document.write("<h2>Selamat datang!</h2>");
+        } else {
+            document.write("<p>Password salah, coba lagi!</p>");
+        }
 
+        document.write("<p>Terima kasih telah membuka aplikasi ini!</p>");
+
+    </script>
+</body>
 </html>
