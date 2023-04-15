@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+  <title>Program coba tugas</title>
+</head>
+
+<body>
+    <h1>Program Shopping teros</h1>
+    <script>
+        function getProductsAmount(productsArr) {
+          // Write your code here
+          let result = {}
+          let listProduk = productsArr.products
+
+          for (let i = 0; i < listProduk.length; i++) {
+            if (result[listProduk[i][0]] === undefined) {
+              result[listProduk[i][0]] = listProduk[i][1]
+            }
+          }
+  return result
+}
+
+  function getTotalPrice(productsObj) {
+    const listProduct = [
+    ["Asus ROG", 25000000],
+    ["Lenovo Legion", 22000000],
+    ["Zyrex 1945", 7000000],
+    ["HP Omen", 20000000],
+    ["Acer Predator", 21000000],
+];
+// Write your code here
+    let result = 0
+    
+      for (let key in productsObj) {
+        for (let i = 0; i < listProduct.length; i++) {
+          if (key === listProduct[i][0]) {
+            result += productsObj[key] * listProduct[i][1]
+          }
+        }
+      }
+return result
+}
+function getDiscount(memberStatus, totalPrice) {
+// Write your code here
+    let result = 0
+    let discount = 0.2
+    if (memberStatus === true) {
+    result = totalPrice - (totalPrice * discount)
+} else {
+  return totalPrice
+}
+return result
+}
+
+function shoppingTeros(customer) {
+// write your code here
+let productAmount = getProductsAmount(customer)
+let totalHarga = getTotalPrice(productAmount)
+let diskon = getDiscount(customer.member, totalHarga)
+if (customer.member === true) {
+return `Hai pelanggan setia ${customer.name}! Total 
+Harga yang harus kamu bayar adalah Rp ${diskon}`
+} else {
+return `Hai ${customer.name}! Total Harga yang harus 
+kamu bayar adalah Rp ${totalHarga}`
+}
+}
+  let customer1 = {
+  name: "Fajrin",
+  products: [
+    ["Asus ROG", 2],
+    ["Lenovo Legion", 3],
+  ],
+  member: true,
+};
+  let customer2 = {
+    name: "Fadlila",
+    products: [
+      ["Acer Predator", 1],
+      ["Asus ROG", 3],
+      ["Lenovo Legion", 1],
+],
+member: false,
+};
+
+  let customer3 = {
+    name: "Jetly",
+    products: [["HP Omen", 2]],
+    member: true,
+};
+
+// TEST CASES
+console.log(shoppingTeros(customer1)); // Hai pelanggan setia Fajrin! Total Harga yang harus kamu bayar adalah Rp 92800000
+console.log(shoppingTeros(customer2)); // Hai Fadlila! Total Harga yang harus kamu bayar adalah Rp 118000000
+console.log(shoppingTeros(customer3)); // Hai pelanggan setia Jetly! Total Harga yang harus kamu bayar adalah Rp 32000000
+
+        </script>   
+    </body>
+</html> 
