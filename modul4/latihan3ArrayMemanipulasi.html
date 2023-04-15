@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <title>Mengisi data ke array</title>
+</head>
+<body>
+    <script>
+        // membuat array
+        var namateman = ["hilma", "aulia", "fifi","elfani"];
+        var hobi = ["menyanyi","membaca","menulis","fotografi"];
+        document.write("Array Nama: <li>"+namateman+"<br>Array Hobi dari: <li>"+hobi);
+        // menambahkan data array
+        namateman.push("rahma","winda");
+        document.write("<hr>Disini saya menambah data Nama menggunakan push, dan sekarang data Nama menjadi :<br>"+namateman+"<br><hr>");
+        //mengeluarkan data array
+        hobi.pop("fotografi");
+        document.write("Nah sekarang saya akan menghapus data fotografi pada Hobi mengggunakan pop, data Hobi menjadi :<br>"+hobi+"<br><hr>");
+        //mengeluarkan elemen pertama
+        hobi.shift();
+        document.write("<hr>Disini saya akan mengeluarkan elemen pertama dari data Hobi menggunakan shift, dan sekarang data Hobi menjadi :<br>"+hobi+"<br><hr>");
+        //menghapus array
+        delete namateman["4"];
+        document.write("<hr>Kemudian saya akan menghapus elemen kelima dari data Nama menggunakan delete, dan sekarang data Nama menjadi :<br>"+namateman+"<br><hr>");
+        // menapilkan isi array
+        hobi.splice(2,1);
+        document.write("<hr>Lalu saya akan menghapus sebanyak dua elemen berawal dari index pertama dari data Nama menggunakan splice, dan sekarang data Hobi menjadi :<br>"+hobi+"<br><hr>");
+    </script>
+</body>
+</html>
