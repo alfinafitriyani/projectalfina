@@ -1,11 +1,11 @@
 <html lang="en">
 
 <head>
-  <title>Program coba tugas</title>
+  <title>Program tugas modul 4</title>
 </head>
 
 <body>
-    <h1>Program Shopping teros</h1>
+    <h1>Program Toko Handphone ACell</h1>
     <script>
         function getProductsAmount(productsArr) {
           // Write your code here
@@ -22,11 +22,11 @@
 
   function getTotalPrice(productsObj) {
     const listProduct = [
-    ["Asus ROG", 25000000],
-    ["Lenovo Legion", 22000000],
-    ["Zyrex 1945", 7000000],
-    ["HP Omen", 20000000],
-    ["Acer Predator", 21000000],
+    ["Vivo", 27000000],
+    ["Samsung", 22500000],
+    ["Iphone", 17000000],
+    ["Oppo", 28000000],
+    ["Xiaomi", 21000000],
 ];
 // Write your code here
     let result = 0
@@ -43,7 +43,7 @@ return result
 function getDiscount(memberStatus, totalPrice) {
 // Write your code here
     let result = 0;
-    let discount = 0.2;
+    let discount = 0.1;
     if (memberStatus === true) {
     result = totalPrice - (totalPrice * discount)
 } else {
@@ -52,7 +52,7 @@ function getDiscount(memberStatus, totalPrice) {
 return result
 }
 
-function shoppingTeros(customer) {
+function ACell(customer) {
 // write your code here
 let productAmount = getProductsAmount(customer)
 let totalHarga = getTotalPrice(productAmount)
@@ -66,38 +66,40 @@ kamu bayar adalah Rp ${totalHarga}`
 }
 }
   let customer1 = {
-  name: "Fajrin",
+  name: "Endah",
   products: [
-    ["Asus ROG", 2],
-    ["Lenovo Legion", 3],
+    ["Vivo", 2],
+    ["Realme", 3],
   ],
-  memberStatus: true,
+  memberStatus: false,
 };
   let customer2 = {
-    name: "Fadlila",
+    name: "Risfana",
     products: [
-      ["Acer Predator", 1],
-      ["Asus ROG", 3],
-      ["Lenovo Legion", 1],
+      ["Iphone", 1],
+      ["Oppo", 1],
 ],
-memberStatus: false,
+memberStatus: true,
 };
 
   let customer3 = {
-    name: "Jetly",
-    products: [["HP Omen", 2]],
-    memberStatus: true,
+    name: "Alba",
+    products: [
+      ["Xiaomi", 2]
+      ["Samsung", 4]
+  ],
+    memberStatus: false,
 };
 
 // TEST CASES
-console.log(shoppingTeros(customer1)); // Hai pelanggan setia Fajrin! Total Harga yang harus kamu bayar adalah Rp 92800000
-console.log(shoppingTeros(customer2)); // Hai Fadlila! Total Harga yang harus kamu bayar adalah Rp 118000000
-console.log(shoppingTeros(customer3)); // Hai pelanggan setia Jetly! Total Harga yang harus kamu bayar adalah Rp 32000000
+console.log(ACell(customer1));
+console.log(ACell(customer2));
+console.log(ACell(customer3)); 
 
 //output
-document.write(shoppingTeros(customer1));
-document.write(shoppingTeros(customer2));
-document.write(shoppingTeros(customer3));
+document.write(ACell(customer1));
+document.write(ACell(customer2));
+document.write(ACell(customer3));
 
         </script>   
     </body>
