@@ -1,106 +1,110 @@
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Program tugas modul 4</title>
+	<title>Cifou Phone</title>
+	
 </head>
-
 <body>
-    <h1>Program Toko Handphone ACell</h1>
-    <script>
-        function getProductsAmount(productsArr) {
-          // Write your code here
-          let result = {};
-          let listProduk = productsArr.products;
+	<h1>Cifou Phone</h1>
+	<form>
+		<label for="nama">Nama:</label>
+		<input type="text" id="nama" nama="nama"><br><br>
 
-          for (let i = 0; i < listProduk.length; i++) {
-            if (result[listProduk[i][0]] === undefined) {
-              result[listProduk[i][0]] = listProduk[i][1]
-            }
-          }
-  return result
-}
+		<label for="alamat">Alamat:</label>
+		<input type="alamat" id="alamat" nama="alamat"><br><br>
 
-  function getTotalPrice(productsObj) {
-    const listProduct = [
-    ["Vivo", 27000000],
-    ["Samsung", 22500000],
-    ["Iphone", 17000000],
-    ["Oppo", 28000000],
-    ["Xiaomi", 21000000],
-];
-// Write your code here
-    let result = 0
+		<label for="member">Member:</label>
+		<input type="checkbox" id="member" name="member"><br><br>
+
+		<label for="handphone">Handphone:</label>
+		<select id="handphone" nama="handphone">
+			<option value="Oppo A78 5G">Oppo A78 5G</option>
+			<option value="Samsung Galaxy M14 5G">Samsung Galaxy M14 5G</option>
+			<option value="Realme C55 NFC">Realme C55 NFC</option>
+			<option value="Vivo V21 5G">Vivo V21 5G</option>
+			<option value="Asus ROG Phone 5">Asus ROG Phone 5</option>
+			<option value="iPhone 11">iPhone 11</option>
+			
+			</select><br><br>
+			<label for="quantity">Jumlah:</label>
+			<input type="number" id="quantity" name="quantity"><br><br>
+
+			<label for="handphone2">Handphone:</label>
+			<select id="handphone2" nama="handphone2">
+			<option value="Oppo A78 5G">Oppo A78 5G</option>
+			<option value="Samsung Galaxy M14 5G">Samsung Galaxy M14 5G</option>
+			<option value="Realme C55 NFC">Realme C55 NFC</option>
+			<option value="Vivo V21 5G">Vivo V21 5G</option>
+			<option value="Asus ROG Phone 5">Asus ROG Phone 5</option>
+			<option value="iPhone 11">iPhone 11</option>
+	
+			</select><br><br>
+			<label for="quantity2">Jumlah:</label>
+			<input type="number" id="quantity2" name="quantity2"><br><br>
+
+			<button type="button" onclick="calculateTotal()">Total</button><br><br>
+		<label for="total">Total Harga:</label>
+		<input type="text" id="total" name="total" readonly><br><br>
+	</form>
+
+	<script>
+		function calculateTotal() {
+			let handphone = document.getElementById("handphone").value;
+			let handphone2 = document.getElementById("handphone2").value;
+			let quantity = parseInt(document.getElementById("quantity").value);
+			let quantity2 = parseInt(document.getElementById("quantity2").value);
+			let isMember = document.getElementById("member").checked;
+			let price = 0;
     
-      for (let key in productsObj) {
-        for (let i = 0; i < listProduct.length; i++) {
-          if (key === listProduct[i][0]) {
-            result += productsObj[key] * listProduct[i][1]
-          }
-        }
-      }
-return result
-}
-function getDiscount(memberStatus, totalPrice) {
-// Write your code here
-    let result = 0;
-    let discount = 0.1;
-    if (memberStatus === true) {
-    result = totalPrice - (totalPrice * discount)
-} else {
-  return totalPrice
-}
-return result
-}
-
-function ACell(customer) {
-// write your code here
-let productAmount = getProductsAmount(customer)
-let totalHarga = getTotalPrice(productAmount)
-let diskon = getDiscount(customer.member, totalHarga)
-if (customer.member === true) {
-return `Hai pelanggan setia ${customer.name}! Total 
-Harga yang harus kamu bayar adalah Rp ${diskon}`
-} else {
-return `Hai ${customer.name}! Total Harga yang harus 
-kamu bayar adalah Rp ${totalHarga}`
-}
-}
-  let customer1 = {
-  name: "Endah",
-  products: [
-    ["Vivo", 2],
-    ["Realme", 3],
-  ],
-  memberStatus: false,
-};
-  let customer2 = {
-    name: "Risfana",
-    products: [
-      ["Iphone", 1],
-      ["Oppo", 1],
-],
-memberStatus: true,
-};
-
-  let customer3 = {
-    name: "Alba",
-    products: [
-      ["Xiaomi", 2]
-      ["Samsung", 4]
-  ],
-    memberStatus: false,
-};
-
-// TEST CASES
-console.log(ACell(customer1));
-console.log(ACell(customer2));
-console.log(ACell(customer3)); 
-
-//output
-document.write(ACell(customer1));
-document.write(ACell(customer2));
-document.write(ACell(customer3));
-
-        </script>   
-    </body>
-</html> 
+			switch(handphone) {
+				case "Oppo A78 5G":
+					price = 36000000;
+					break;
+				case "Samsung Galaxy M14 5G":
+					price = 30000000;
+					break;
+				case "Realme C55 NFC":
+					price = 25000000;
+					break;
+				case "Vivo V21 5G":
+					price = 5500000;
+					break;
+				case "Asus ROG Phone 5":
+					price = 11000000;
+					break;
+				case "iPhone 11":
+					price = 8000000;
+					break;	
+			}
+			switch(handphone2) {
+				case "Oppo A78 5G":
+					price2 = 36000000;
+					break;
+				case "Samsung Galaxy M14 5G":
+					price2 = 30000000;
+					break;
+				case "Realme C55 NFC":
+					price2 = 25000000;
+					break;
+				case "Vivo V21 5G":
+					price2 = 5500000;
+					break;
+				case "Asus ROG Phone 5":
+					price2 = 11000000;
+					break;
+				case "iPhone 11":
+					price2 = 8000000;
+					break;	
+			}
+			let total = ((price * quantity) + (price2 * quantity2));
+		
+			if (isMember) {
+				total *= 0.9;
+			}
+		
+			document.getElementById("total").value = total;
+		}
+		
+		</script>
+		</body>
+		</html>
