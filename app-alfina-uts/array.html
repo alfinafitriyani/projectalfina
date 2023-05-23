@@ -26,10 +26,12 @@
                     output += '<p>Nama:'+ Nama[i] + '</p>';
                     output += '<p>No.HP:'+ nohp[i] + '</p>';
                     output += '<p>Alamat:'+ Alamat[i] + '</p>';
+                    output += '<hr>';
                 }
 
                 datamhs.innerHTML = output;
             }
+            
             function tambahdata() {
                 var Namabaru = prompt("Masukkan Nama:");
                 var nohpbaru = prompt("Masukkan No.HP:");
@@ -38,15 +40,16 @@
                 Nama.push(Namabaru);
                 nohp.push(nohpbaru);
                 Alamat.push(ALamatbaru);
-
+                
                 tampilkandata();
+                
             }
 
             function hapusdata() {
-      if(Nama.length > 0){
-        Nama.pop();
-        tampilkandata();
-      }
+             if(Nama.length > 0){
+             Nama.pop();
+             tampilkandata();
+             }
     }
             
         </script>
