@@ -43,15 +43,9 @@
             }
 
             function hapusdata() {
-      var index = parseInt(prompt("Masukkan index data yang ingin dihapus (0 - " + (Nama.length - 1) + "):"));
-
-      if (index >= 0 && index < Nama.length) {
-        Nama.splice(index, 1);
-        nohp.splice(index, 1);
-        Alamat.splice(index, 1);
-        tampilkanData();
-      } else {
-        alert("Index tidak valid!");
+      if(Nama.length > 0){
+        Nama.pop();
+        tampilkandata();
       }
     }
             
