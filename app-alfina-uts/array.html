@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>DATA ARRAY</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h2>Data Array</h2>
+        <div id="data"></div>
+
+        <button onclick="tampilkandata()">Tampilkan Data</button>
+        <button onclick="tambahdata()">Tambah Data</button>
+        <button onclick="hapusdata()">Hapus Data</button>
+        
+        <script>
+            var Nama = ["Alfina Fitriyani"];
+            var Tl = ["23 Oktober 2004"];
+            var nohp = ["085727141432"];
+            var Alamat = ["Jebol, Mayong, Jepara"];
+
+            function tampilkandata() {
+                var datamhs = document.getElementById('data');
+                var output = '';
+
+                for (var i = 0; i < Nama.length; i++) {
+                    output += '<p>Nama:'+ Nama[i] + '</p>';
+                    output += '<p>Tanggal Lahir:'+ Tl[i] + '</p>';
+                    output += '<p>No.HP:'+ nohp[i] + '</p>';
+                    output += '<p>Alamat:'+ Alamat[i] + '</p>';
+                }
+
+                datamhs.innerHTML = output;
+            }
+            function tambahdata() {
+                var Namabaru = prompt("Masukkan Nama:");
+                var Tlbaru = prompt("Masukkan Tanggal Lahir:");
+                var nohpbaru = prompt("Masukkan No.HP:");
+                var ALamatbaru = prompt("Masukkan Alamat:");
+
+                Nama.push(Namabaru);
+                Tl.push(Tlbaru);
+                nohp.push(nohpbaru);
+                Alamat.push(ALamatbaru);
+
+                tampilkandata();
+            }
+
+            function hapusdata() {
+                var index = parseInt(prompt("Silahkan masukkan index data yang ingin dihapus(0- " +(Nama.length - 1) + "):"));
+
+                if (index >= 0 && index < Nama.length) {
+                    Nama.splice(index, 1);
+                    Tl.splice(indeks, 1);
+                    nohp.splice(indeks, 1);
+                    Alamat.splice(indeks, 1);
+                    tampilkandata();
+                } else {
+                    alert("index tidak valid!");
+                }
+            }
+        </script>
+    </body>
+ </html>

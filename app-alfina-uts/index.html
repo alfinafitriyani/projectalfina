@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Nilai Mahasiswa</title>
+  </head>
+    <body>
+      
+      <form>
+        </div>
+          <h2>INPUT DATA MAHASISWA</h2>
+          
+          <div><label for="nim">NIM:</label></div></tr>
+          <div><input type="text" id="nim" name="nim" placeholder="Masukkan NIM"></div>
+          
+          <div><label for="Nama">Nama Lengkap:</label></div>
+          <div><input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap"></div>
+          
+          <div><label for="MataKuliah">Mata Kuliah:</label></div>
+          <div><select id="MataKuliah" required> 
+            <option value="">Pilih Mata Kuliah</option>
+            <option value="Arsitektur Komputer">Arsitektur Komputer</option>
+            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+            <option value="Desain Perangkat Lunak">Desain Perangkat Lunak</option>
+            <option value="Diskrit 1">Diskrit 1</option>
+            <option value="Kalkulus 2">Kalkulus 2</option>
+            <option value="Pemrogaman Komputer 2">Pemrogaman Komputer 2</option>
+            <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
+            <option value="Praktik Pemrogaman Komputer 2">Praktik Pemrogaman Komputer 2</option>
+            <option value="Sistem Operasi">Sistem Operasi</option>
+            <option value="Struktur Data dan Algoritma">Struktur Data dan Algoritma</option>
+          </select>
+          </div>
+
+          <div><label for="NilaiAkhir">Nilai Akhir:</label></div>
+          <div><input type="text" id="NilaiAkhir" name="NilaiAkhir" placeholder="Masukkan Nilai Akhir"></div>
+            <div><input type="button" value="TAMPIL" onclick="tampilkannilai()">
+            <input type="reset" value="RESET" /></div>
+            
+            <table>
+              <thead>
+                  <tr>
+                      <th>NIM</th>
+                      <th>Nama Lengkap</th>
+                      <th>Mata Kuliah</th>
+                      <th>Nilai Akhir</th>
+                      <th>Grade</th>
+                      <th>Indeks Nilai</th>
+                      <th>Hapus</th>
+                  </tr>
+                  <tbody id="nilaimahasiswa"></tbody>
+              </thead>
+          </table>
+          <script src="script.js">  </script>
+          <div>
+          <a href="array.html"><input type="button" value="ARRAY"/></a>
+          <a href="profil.html"><input type="button" value="PROFIL"/></a></div>
+          </form>
+          
+          
+  </body>
+</html>
