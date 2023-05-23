@@ -1,12 +1,12 @@
  <!DOCTYPE html>
  <html>
     <head>
-        <title>DATA ARRAY</title>
+        <title> MANIPULASI DATA ARRAY</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="script.js"></script>
     </head>
     <body>
-        <h2>Data Array</h2>
+        <h2>DATA ARRAY</h2>
         <div id="data"></div>
 
         <button onclick="tampilkandata()">Tampilkan Data</button>
@@ -15,7 +15,6 @@
         
         <script>
             var Nama = ["Alfina Fitriyani"];
-            var Tl = ["23 Oktober 2004"];
             var nohp = ["085727141432"];
             var Alamat = ["Jebol, Mayong, Jepara"];
 
@@ -25,7 +24,6 @@
 
                 for (var i = 0; i < Nama.length; i++) {
                     output += '<p>Nama:'+ Nama[i] + '</p>';
-                    output += '<p>Tanggal Lahir:'+ Tl[i] + '</p>';
                     output += '<p>No.HP:'+ nohp[i] + '</p>';
                     output += '<p>Alamat:'+ Alamat[i] + '</p>';
                 }
@@ -34,12 +32,10 @@
             }
             function tambahdata() {
                 var Namabaru = prompt("Masukkan Nama:");
-                var Tlbaru = prompt("Masukkan Tanggal Lahir:");
                 var nohpbaru = prompt("Masukkan No.HP:");
                 var ALamatbaru = prompt("Masukkan Alamat:");
 
                 Nama.push(Namabaru);
-                Tl.push(Tlbaru);
                 nohp.push(nohpbaru);
                 Alamat.push(ALamatbaru);
 
@@ -47,18 +43,18 @@
             }
 
             function hapusdata() {
-                var index = parseInt(prompt("Silahkan masukkan index data yang ingin dihapus(0- " +(Nama.length - 1) + "):"));
+      var index = parseInt(prompt("Masukkan index data yang ingin dihapus (0 - " + (Nama.length - 1) + "):"));
 
-                if (index >= 0 && index < Nama.length) {
-                    Nama.splice(index, 1);
-                    Tl.splice(indeks, 1);
-                    nohp.splice(indeks, 1);
-                    Alamat.splice(indeks, 1);
-                    tampilkandata();
-                } else {
-                    alert("index tidak valid!");
-                }
-            }
+      if (index >= 0 && index < Nama.length) {
+        Nama.splice(index, 1);
+        nohp.splice(index, 1);
+        Alamat.splice(index, 1);
+        tampilkanData();
+      } else {
+        alert("Index tidak valid!");
+      }
+    }
+            
         </script>
     </body>
  </html>
