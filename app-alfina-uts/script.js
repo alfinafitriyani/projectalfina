@@ -52,28 +52,20 @@ function tampilkannilai() {
       "<td>" + NilaiAkhir + "</td>"+
       "<td>" + Grade +"</td>"+
       "<td>" + indeksNilai + "</td>"+
-      "<td><button onclick =\"hapusData('"  + MataKuliah +"')\">HAPUS</button></td>" +
+      "<td><button onclick ='hapusData()'>HAPUS</button></td>" +
  "</tr>";
 
     var hasilakhir = document.getElementById('nilaimahasiswa');
     hasilakhir.innerHTML +=data;
   }
-  function reset(){
+  function resetdata(){
     document.getElementById(`nim`).value='';
     document.getElementById(`nama`).value=``;
     document.getElementById(`MataKuliah`).value=``;
     document.getElementById(`NilaiAkhir`).value=``;
     
   }
-  function hapusData(MataKuliah) {
-    var hasilakhir1 = document.getElementById('nilaimahasiswa');
-    var rows = hasilakhir1.getElementsByTagName('tr ');
-    for (var i = 0; i < rows.length; i++) {
-      var row = rows[i];
-      var rowmatakuliah = row.getElementsByTagName('td')[0].textContent;
-      if (rowmatakuliah === MataKuliah) {
-        row.parentNode.removeChild(row);
-        break;
-      }
-    }
+  function hapusData(button) {
+    var row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
   }
