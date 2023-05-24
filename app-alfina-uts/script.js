@@ -1,4 +1,4 @@
-function tampilkannilai() {
+function tampil() {
     var nim = document.getElementById("nim").value;
     var nama = document.getElementById("nama").value;
     var MataKuliah = document.getElementById("MataKuliah").value;
@@ -58,13 +58,7 @@ function tampilkannilai() {
     var hasilakhir = document.getElementById('nilaimahasiswa');
     hasilakhir.innerHTML +=data;
   }
-  function resetdata(){
-    document.getElementById(`nim`).value=null;
-    document.getElementById(`nama`).value=null;
-    document.getElementById(`MataKuliah`).value=null;
-    document.getElementById(`NilaiAkhir`).value=null;
-    document.getElementById('nilaimahasiswa').value='1';
-  }
+  
   function hapusData(button) {
     var row = button.parentNode.parentNode;
     row.parentNode.removeChild(row);
