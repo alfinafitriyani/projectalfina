@@ -52,20 +52,21 @@ function tampilkannilai() {
       "<td>" + NilaiAkhir + "</td>"+
       "<td>" + Grade +"</td>"+
       "<td>" + indeksNilai + "</td>"+
-      "<td><button onclick ='hapusData()'>HAPUS</button></td>" +
+      "<td><button class='deleteButton' onclick='hapusData(this)'>Hapus</button></td>" +
  "</tr>";
 
     var hasilakhir = document.getElementById('nilaimahasiswa');
     hasilakhir.innerHTML +=data;
   }
   function resetdata(){
-    document.getElementById(`nim`).value='';
-    document.getElementById(`nama`).value=``;
-    document.getElementById(`MataKuliah`).value=``;
-    document.getElementById(`NilaiAkhir`).value=``;
-    
+    document.getElementById(`nim`).value=null;
+    document.getElementById(`nama`).value=null;
+    document.getElementById(`MataKuliah`).value=null;
+    document.getElementById(`NilaiAkhir`).value=null;
+    document.getElementById('nilaimahasiswa').value='1';
   }
   function hapusData(button) {
     var row = button.parentNode.parentNode;
     row.parentNode.removeChild(row);
   }
+  
