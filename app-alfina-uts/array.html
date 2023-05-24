@@ -12,6 +12,7 @@
         <button onclick="tampilkandata()">Tampilkan Data</button>
         <button onclick="tambahdata()">Tambah Data</button>
         <button onclick="hapusdata()">Hapus Data</button>
+        <button onclick="hapusdata1()">Hapus Data Pertama</button>
         
         <script>
             var Nama = ["Alfina Fitriyani"];
@@ -50,7 +51,14 @@
              Nama.pop();
              tampilkandata();
              }
-    }
+            }
+            
+            function hapusdata1() {
+                    if(Nama.length > 0){
+                    Nama.shift();
+                    tampilkandata();
+                    }
+            }
             
         </script>
         <div>

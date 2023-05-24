@@ -95,6 +95,9 @@ table {
     border: 1px solid #ccc;
     font-size: 16px;
 }
+.bt {
+    margin-bottom: 30px;
+}
 th,
 td {
   text-align: center;
@@ -120,4 +123,7 @@ td {
     font-size: 15px;
     font-weight: bolder;
     outline: auto;
+}
+.btn {
+    margin-top: 30px;
 }
