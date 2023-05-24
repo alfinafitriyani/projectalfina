@@ -3,21 +3,11 @@
     "development"
   ],
   "hints": {
+    "meta-viewport": "off",
     "axe/text-alternatives": [
       "default",
       {
-        "document-title": "off",
         "image-alt": "off"
-      }
-    ],
-    "axe/language": "off",
-    "meta-charset-utf-8": "off",
-    "meta-viewport": "off",
-    "button-type": "off",
-    "axe/forms": [
-      "default",
-      {
-        "label": "off"
       }
     ],
     "no-inline-styles": "off",
@@ -25,6 +15,12 @@
       "default",
       {
         "link-name": "off"
+      }
+    ],
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
       }
     ]
   }
