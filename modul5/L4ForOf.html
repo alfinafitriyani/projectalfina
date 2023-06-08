@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Program for...of</title>
+</head>
+<body>
+    <h1>Program for...of</h1>
+    <button onclick="hitung()">KLik</button>
+    <p id="result"></p>
+
+    <script>
+        function hitung() {
+            var angkaa = [1, 2, 3, 4, 5];
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = ""; // Mengosongkan hasil sebelumnya
+
+            for (var angka of angkaa) {
+                resultElement.innerHTML += angka + " ";
+            }
+        }
+    </script>
+</body>
+</html>

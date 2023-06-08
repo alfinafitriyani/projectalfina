@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tugas 1</title>
+</head>
+<body>
+    <h1>Nilai Mahasiswa RPL A</h1>
+    <label for="nama">Nama Mahasiswa:</label>
+    <input type="text" id="nama" nama="nama">
+    <label for="tugas">Nilai Tugas:</label>
+    <input type="number" id="tugas" nama="tugas">
+    <label for="ujian">Nilai Ujian:</label>
+    <input type="number" id="ujian" nama="ujian">
+    <button onclick="totalnilai()">Hitung Nilai</button>
+    <p id="result"></p>
+
+    <script>
+        function totalnilai() {
+            var namaInput = document.getElementById("nama").value;
+            var tugasInput = parseFloat(document.getElementById("tugas").value);
+            var ujianInput = parseFloat(document.getElementById("ujian").value);
+            var resultElement = document.getElementById("result");
+            var result;
+
+            var totalnilai = (tugasInput + ujianInput) / 2;
+            var grade;
+
+            if (totalnilai >= 80) {
+                grade = "A";
+            } else if (totalnilai >= 70) {
+                grade = "B";
+            } else if (totalnilai >= 60) {
+                grade = "C";
+            } else if (totalnilai >= 50) {
+                grade = "D";
+            } else {
+                grade = "E";
+            }
+
+            switch (grade) {
+                case "A":
+                case "B":
+                case "C":
+                    result = "Selamat, " + namaInput + "! Anda lulus dengan nilai " + grade + ".";
+                    break;
+                case "D":
+                    result = "Maaf, " + namaInput + ". Anda belum lulus. Perlu perbaikan.";
+                    break;
+                case "E":
+                    result = "Maaf, " + namaInput + ". Anda tidak lulus.";
+                    break;
+                default:
+                    result = "Terjadi kesalahan dalam menghitung nilai.";
+            }
+
+            resultElement.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Program Do-While Statement</title>
+</head>
+<body>
+    <h1>Program Do-While Statement</h1>
+    <button onclick="mulaihitung()">Mulai Pengulangan</button>
+    <p id="result"></p>
+
+    <script>
+        function mulaihitung() {
+            var count = 1;
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = ""; // Mengosongkan hasil sebelumnya
+
+            do {
+                resultElement.innerHTML += count + " ";
+                count++;
+            } while (count <= 10);
+        }
+    </script>
+</body>
+</html>

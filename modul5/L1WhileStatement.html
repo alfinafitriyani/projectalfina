@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Program Penghitung Angka</title>
+</head>
+<body>
+    <h1>Program While Statement</h1>
+    <button onclick="hitung()">Mulai Penghitungan</button>
+    <p id="result"></p>
+
+    <script>
+        function hitung() {
+            var count = 1;
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = ""; // Mengosongkan hasil sebelumnya
+
+            while (count <= 10) {
+                resultElement.innerHTML += count + " ";
+                count++;
+            }
+        }
+    </script>
+</body>
+</html>

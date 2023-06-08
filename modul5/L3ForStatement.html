@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Program Pengulangan dengan for</title>
+</head>
+<body>
+    <h1>Program Pengulangan dengan for</h1>
+    <button onclick="tampilkan()">Tampilkan</button>
+    <p id="result"></p>
+
+    <script>
+        function tampilkan() {
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = ""; // Mengosongkan hasil sebelumnya
+
+            for (var count = 1; count <= 7; count++) {
+                resultElement.innerHTML += count + " ";
+            }
+        }
+    </script>
+</body>
+</html>

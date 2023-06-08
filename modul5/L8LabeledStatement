@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Labeled Statement</title>
+  <script>
+    function tampil() {
+      var result = 0;
+      outerLoop: for (var a = 1; a <= 3; i++) {
+        innerLoop: for (var b = 1; b <= 3; b++) {
+          result = a * b;
+          if (result > 4) {
+            break outerLoop; // Keluar dari kedua loop
+          }
+          console.log(result);
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="tampil()">Tampilkan</button>
+</body>
+</html>

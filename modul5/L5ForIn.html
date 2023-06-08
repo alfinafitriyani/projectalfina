@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Program For...in</title>
+</head>
+<body>
+    <h1>Program For...in</h1>
+    <button onclick="tampilkan()">Klik disini</button>
+    <p id="result"></p>
+
+    <script>
+        function tampilkan() {
+            var biodata = {
+                nama: "Alfina",
+                umur: 30,
+                agama: "Islam"
+            };
+
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = ""; // Mengosongkan hasil sebelumnya
+
+            for (var property in biodata) {
+                resultElement.innerHTML += property + ": " + biodata[property] + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>
