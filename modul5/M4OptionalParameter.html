@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program Optional Parameter</title>
+    <body>
+        <h1>Program Optional Parameter</h1>
+    
+        <input type="text" id="inputPesan" placeholder="Masukkan pesan">
+        <input type="color" id="inputWarna">
+        <button onclick="gantiPesan()">Tampilkan Pesan</button>
+        <div id="output"></div>
+    </body>
+    <script>
+        function tampilkanPesan(pesan, warna) {
+            var output = document.getElementById("output");
+            output.innerHTML = "<p style='color: " + (warna || "black") + "'>" + pesan + "</p>";
+        }
+
+        function gantiPesan() {
+            var pesan = document.getElementById("inputPesan").value;
+            var warna = document.getElementById("inputWarna").value;
+            tampilkanPesan(pesan, warna);
+        }
+    </script>
+</head>
+</html>

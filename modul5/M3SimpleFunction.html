@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program Simple Function</title>
+    <body>
+        <h1>Program Simple Function</h1>
+    
+        <button onclick="cetakHasil()">Cetak Hasil Penjumlahan</button>
+        <div id="output"></div>
+    </body>
+    <script>
+        function tambah(a, b) {
+            return a + b;
+        }
+
+        function cetakHasil() {
+            var hasil = tambah(5, 3);
+            var output = document.getElementById("output");
+            output.innerHTML = "<p>Hasil penjumlahan: " + hasil + "</p>";
+        }
+    </script>
+</head>
+</html>

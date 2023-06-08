@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Program Continue Statement</title>
+    </head><body>
+        <h1>Program Continue Statement</h1>
+    
+        <button onclick="cetakAngkaGanjil()">Cetak Angka Ganjil</button>
+        <p id="hasil"></p>
+    </body>
+    <script>
+        function cetakAngkaGanjil() {
+            var hasil = "";
+
+            for (var i = 1; i <= 10; i++) {
+                if (i % 2 === 0) {
+                    continue;
+                }
+                hasil += i + " ";
+            }
+
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+    </script>
+</head>
+
+</html>

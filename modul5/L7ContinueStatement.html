@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Program Break Statement</title>
+    <script>
+        function cariAngka() {
+            let number = 0;
+            for (number = 0; number<6; number++){
+            if (number===3) continue;
+            document.getElementById("hasil").innerHTML = "berikut angkanya : ";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Program Break Statement</h1>
+
+    <button onclick="cariAngka()">tampilkan</button>
+    <p id="hasil"></p>
+</body>
+</html>

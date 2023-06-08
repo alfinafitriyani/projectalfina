@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program Execution Context</title>
+    <body>
+        <h1>Contoh Program dengan Execution Context</h1>
+        <div id="output"></div>
+    </body>
+    <script>
+        var pesan = "Halo, dunia!"; // Variabel di dalam global execution context
+
+        function cetakPesan() {
+            var pesan = "Selamat Pagi!"; // Variabel di dalam local execution context fungsi cetakPesan()
+            var output = document.getElementById("output"); // Mengambil elemen dengan ID "output"
+            output.innerHTML = "<p>" + pesan + "</p>"; // Menetapkan pesan ke elemen output
+        }
+
+        function ubahPesan() {
+            pesan = "Selamat siang!"; // Mengubah nilai variabel pesan di dalam global execution context
+            var output = document.getElementById("output"); // Mengambil elemen dengan ID "output"
+            output.innerHTML = "<p>" + pesan + "</p>"; // Menetapkan pesan yang diubah ke elemen output
+        }
+
+        window.onload = function() {
+            var output = document.getElementById("output"); // Mengambil elemen dengan ID "output"
+            output.innerHTML = "<p>" + pesan + "</p>"; // Menetapkan pesan awal ke elemen output
+            cetakPesan(); // Memanggil fungsi cetakPesan()
+            ubahPesan(); // Memanggil fungsi ubahPesan()
+        };
+    </script>
+</head>
+</html>

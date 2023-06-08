@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program Parameter Type</title>
+    <body>
+        <h1>Program Parameter Type</h1>
+    
+        <button onclick="tambah(5, 3)">Tambah 5 + 3</button>
+        <button onclick="gantiPesan()">Ganti Pesan</button>
+        <div id="output"></div>
+    </body>
+    <script>
+        function tampilkanPesan(pesan) {
+            var output = document.getElementById("output");
+            output.innerHTML = "<p>" + pesan + "</p>";
+        }
+
+        function tambah(a, b) {
+            var hasil = a + b;
+            tampilkanPesan("Hasil penjumlahan: " + hasil);
+        }
+
+        function gantiPesan() {
+            var pesan = "Halo, dunia!";
+            tampilkanPesan(pesan);
+        }
+    </script>
+</head>
+</html>
