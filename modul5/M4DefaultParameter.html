@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Program Optional Parameter</title>
+    <title>Program Default Parameter</title>
     <script>
-        function tampilkanInfo(nama, usia = "Belum diketahui") {
+        function tampilkanInfo(nama, usia) {
+            nama = nama || "Tidak ada nama";
+            usia = usia || "Belum diketahui";
+            
             var output = document.getElementById("output");
             output.innerHTML = "<p>Nama: " + nama + "</p><p>Usia: " + usia + "</p>";
         }
@@ -16,7 +19,7 @@
     </script>
 </head>
 <body>
-    <h1>Contoh Program dengan Optional Parameter</h1>
+    <h1>Program Default Parameter</h1>
 
     <input type="text" id="inputNama" placeholder="Masukkan nama">
     <input type="text" id="inputUsia" placeholder="Masukkan usia">

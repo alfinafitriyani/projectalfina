@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rest Parameter Example</title>
+  <script>
+    function sum(...angkaa) {
+      let total = 0;
+      for (let number of angkaa) {
+        total += number;
+      }
+      return total;
+    }
+
+    function displaySum(...angkaa) {
+      const result = sum(...angkaa);
+      document.getElementById("output").innerHTML = `Total sum: ${result}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Rest Parameter Example</h1>
+  <button onclick="displaySum(1, 2, 3, 4, 5)">Total</button>
+  <p id="output"></p>
+</body>
+</html>
