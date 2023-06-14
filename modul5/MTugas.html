@@ -1,107 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pengelolaan Nilai Siswa</title>
-  <script>
-    let nilaiSiswa = [];
-
-    function tambahNilai(nama, nilai) {
-      nilaiSiswa.push({ nama, nilai });
+  <title>Acak Tugas</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
     }
-
-    function hitungRataRata() {
-      let total = 0;
-      for (let siswa of nilaiSiswa) {
-        total += siswa.nilai;
-      }
-      return total / nilaiSiswa.length;
-    }
-
-    function cariNilaiTertinggi() {
-      let nilaiTertinggi = -Infinity;
-      for (let siswa of nilaiSiswa) {
-        if (siswa.nilai > nilaiTertinggi) {
-          nilaiTertinggi = siswa.nilai;
-        }
-      }
-      return nilaiTertinggi;
-    }
-
-    function cariNilaiTerendah() {
-      let nilaiTerendah = Infinity;
-      for (let siswa of nilaiSiswa) {
-        if (siswa.nilai < nilaiTerendah) {
-          nilaiTerendah = siswa.nilai;
-        }
-      }
-      return nilaiTerendah;
-    }
-
-    function displayNilaiSiswa() {
-      let output = document.getElementById("output");
-      output.innerHTML = "";
-
-      for (let siswa of nilaiSiswa) {
-        let nilaiElem = document.createElement("p");
-        nilaiElem.innerHTML = `${siswa.nama}: ${siswa.nilai}`;
-        output.appendChild(nilaiElem);
-      }
-    }
-
-    function displayRataRata() {
-      let output = document.getElementById("output");
-      let rataRata = hitungRataRata();
-
-      let rataRataElem = document.createElement("p");
-      rataRataElem.innerHTML = `Rata-rata Nilai: ${rataRata}`;
-      output.appendChild(rataRataElem);
-    }
-
-    function displayNilaiTertinggi() {
-      let output = document.getElementById("output");
-      let nilaiTertinggi = cariNilaiTertinggi();
-
-      let nilaiTertinggiElem = document.createElement("p");
-      nilaiTertinggiElem.innerHTML = `Nilai Tertinggi: ${nilaiTertinggi}`;
-      output.appendChild(nilaiTertinggiElem);
-    }
-
-    function displayNilaiTerendah() {
-      let output = document.getElementById("output");
-      let nilaiTerendah = cariNilaiTerendah();
-
-      let nilaiTerendahElem = document.createElement("p");
-      nilaiTerendahElem.innerHTML = `Nilai Terendah: ${nilaiTerendah}`;
-      output.appendChild(nilaiTerendahElem);
-    }
-
-    function tambahDanTampilkanNilai() {
-      let nama = document.getElementById("nama").value;
-      let nilai = parseFloat(document.getElementById("nilai").value);
-
-      tambahNilai(nama, nilai);
-      displayNilaiSiswa();
-    }
-  </script>
+  </style>
 </head>
 <body>
-  <h1>Pengelolaan Nilai Mahasiswa RPL A</h1>
+  <h1>Acak Kelompok</h1>
+  <label for="noabsen">Masukkan No.Absen (pisahkan dengan koma):</label><br>
+  <input type="text" id="noabsen"><br>
+  <label for="kelompokInput">Masukkan Jumlah Kelompok:</label><br>
+  <input type="number" id="kelompokInput"><br>
+  <button onclick="acak()">Mulai</button>
+  <h2>Hasil Kelompok:</h2>
+  <ul id="tugasList"></ul>
 
-  <div>
-    <label for="nama">Nama:</label>
-    <input type="text" id="nama"></div>
-    <div><label for="nim">NIM :</label>
-    <input type="text" id="nim"></div>
-    <div><label for="nilai">Nilai:</label>
-    <input type="number" id="nilai"></div>
-    <button onclick="tambahDanTampilkanNilai()">Tambahkan Nilai</button>
-  
+  <script>
+    function acak() {
+      var noabsen = document.getElementById("noabsen").value;
+      var kelompokInput = document.getElementById("kelompokInput").value;
+      var tugasList = document.getElementById("tugasList");
+      tugasList.innerHTML = "";
 
-  <h2>Daftar Nilai Siswa:</h2>
-  <div id="output"></div>
+      if (noabsen && kelompokInput) {
+        var nims = noabsen.split(",");
+        var kelompokCount = parseInt(kelompokInput);
 
-  <button onclick="displayRataRata()">Hitung Rata-rata</button>
-  <button onclick="displayNilaiTertinggi()">Nilai Tertinggi</button>
-  <button onclick="displayNilaiTerendah()">Nilai Terendah</button>
+        var tugas = [];
+        for (var i = 0; i < kelompokCount; i++) {
+          tugas.push([]);
+        }
+
+        for (var j = 0; j < nims.length; j++) {
+          var nim = nims[j].trim();
+          var kelompokIndex = (parseInt(nim.substr(-1)) % kelompokCount) - 1;
+          if (kelompokIndex === -1) {
+            kelompokIndex = kelompokCount - 1;
+          }
+          tugas[kelompokIndex].push(nim);
+        }
+
+        for (var k = 0; k < tugas.length; k++) {
+          var li = document.createElement("li");
+          li.innerText = "Kelompok " + (k + 1) + ": " + tugas[k].join(", ");
+          tugasList.appendChild(li);
+        }
+      }
+    }
+  </script>
 </body>
 </html>
