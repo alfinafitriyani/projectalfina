@@ -1,35 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initialscale=1.0">
-
-    <title> Memory Game in JavaScript</title>
-    <link rel="stylesheet" href="assets/styles.css" />
-    <script src="assets/game.js" defer></script>
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="assets/tampilanawal.css" />
 </head>
-
 <body>
-    <div class="game">
-        <div class="controls">
-            <button>Start</button>
-            <div class="stats">
-                <div class="moves">0 moves</div>
-                <div class="timer">time: 0 sec</div>
-            </div>
-            
-            <hr><a href="awal.html"><input type="button" value="Exit"/></a></hr>
+  <div class="container">
+    <div class="start-container">
+      <h2>WELCOME TO MEMORY GAME!!</h2>
+      <img src="assets/foto/pictures1.png" alt="Gambar 1">
+      <p>Klik tombol dibawah ini untuk ke menu game.</p>
+      <a href="game.html"><input type="button" value="Let's Go!!!"/></a>
     </div>
-   
-        <div class="board-container">
-            <div class="board" data-dimension="4"></div>
-            <div class="win">You won!</div>
-        </div>
-        
-       
-</div>
+    <div id="game-board" style="display: none;"></div>
+  </div>
 </body>
-
 </html>
