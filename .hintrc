@@ -1,0 +1,54 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-active": "off"
+      }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off",
+        "select-name": "off"
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "document-title": "off",
+        "image-alt": "off"
+      }
+    ],
+    "meta-viewport": "off",
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
+    ],
+    "disown-opener": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-tap-highlight-color",
+          "-moz-appearance",
+          "backdrop-filter"
+        ]
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "input-button-name": "off"
+      }
+    ],
+    "no-inline-styles": "off",
+    "button-type": "off",
+    "meta-charset-utf-8": "off"
+  }
+}

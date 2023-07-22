@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+/*  Home
+=============================================*/
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color:var(--header);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: black url(../laut.jpeg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.start_game, .add_button{
+  justify-content: center;
+  font-size: 2.5rem;
+  width: 15rem;
+  height:5rem;
+  margin-top: 1rem;
+
+}
+.game, .add{
+  text-decoration:none;
+  color:var(--button);
+}
+
+footer{
+  position: absolute;
+  height:60px;
+  width:100%;
+  bottom:0;
+  left:0; 
+  display: flex;
+  align-items: center;
+}
+.datos{
+  color: white;
+  font-family: var(--info);
+  font-size: 18px;
+  text-align: center;
+  padding-left: 8%;
+}
+.contacto{
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60%;
+}
+.contacto img{
+  width: 40px;
+  margin-right: 20px;
+  
+}
+
+/*  Styles 
+=============================================*/
+header p{
+  font-family: var(--info);
+  color: white;
+  font-size: 18px;
+  margin-top: 1.5rem;
+}
+
+
+.start_game, .add_button{
+  backdrop-filter: blur(5px);
+  color: var(--button);
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.455);
+  border-top:  1px solid rgba(255, 255, 255, 0.5);
+  border-left:  1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+  transition: all 0.3s ease-in-out;
+}
+
+/*  Hover
+=============================================*/
+
+.start_game:hover{
+  transform: translateY(-3px);
+  background-color: var(--start);
+  color: white;
+}
+
+.add_button:hover{
+  transform: translateY(3px);
+  background-color: var(--add);
+  color:white;
+}  
+
+.contacto img:hover{
+  transform: translateY(-1px);
+}
+
+
+/*  Dimensions
+=============================================*/
+
+@media (max-width: 900px){
+  body{
+      background-image: url("../laut.jpeg");
+  }
+  .contacto{
+      padding-left: 40%;
+  }
+}
+
+@media (max-width:600px){
+  body{
+      background-image: url("../img/portada_cel.jpg");
+  }
+  footer{
+      display:table;
+  }
+  .datos{
+      padding:0;
+  }
+
+  .contacto{
+      padding: 0;
+      justify-content: center;
+  }
+  .contacto img {
+      margin-right: 15px;
+      margin-top: 5px;
+  }
+}

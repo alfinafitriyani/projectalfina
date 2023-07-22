@@ -1,0 +1,279 @@
+/* Selector ini mengatur margin dan padding menjadi 0 pada semua elemen. */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    /* lebar dan tinggi elemen termasuk dalam total lebar dan tinggi, termasuk padding dan border. */
+  }
+  
+  /* Style untuk body */
+  body {
+    background: #353434;
+    ;
+    color: #fff;
+  }
+  
+  /* Header */
+  .header {
+    width: 100%;
+    /* Mengatur lebar menjadi 100% */
+    height: 100vh;
+    /* Membuat tampilan menjadi full page */
+    background-image: url(aset/profil.png);
+    background-size: cover;
+    /* Mengatur uk latar belakang agar menyesuaikan dengan elemen background-size:cover */
+    background-position: center;
+    /* Mengatur posisi latar belakang ke tengah */
+  }
+  
+  .container {
+    padding: 10px 10%;
+    /*Memberikan padding 10 piksel di atas dan bawah, serta 10% dari lebar container di kiri dan kanan. */
+    /* Membarikan jarak antara logo dan navbar*/
+  }
+  
+  nav {
+    display: flex;
+    /* mengatur tata letak supaya responsif */
+    align-items: center;
+    /* Mengatur navbar ke tengah */
+    justify-content: space-between;
+    /* Membuat navbar kepojok dengan space*/
+    flex-wrap: wrap;
+    /* Mengatur wrap elemen-elemen dalam nav jika melebihi lebar layar menggunakan flex-wrap: wrap. */
+  }
+  
+  
+  .logo {
+    width: 140px;
+    /* mengatur lebar */
+    margin-top: 20px;
+    /* mengatur jarak ke atas */
+  
+  }
+  
+  nav ul li {
+    display: inline-block;
+    /* agar tampil dalam satu baris menggunakan display: inline-block. */
+    list-style: none;
+    /* Menghilangkan tanda bullet pada elemen-elemen li  */
+    margin: 10px 20px;
+    /* jarak 10 keatas dan 20 kekiri */
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+  }
+  
+  /* Menambahkan garis bawah yang muncul. ':hover' mengatur tampilan pada tautan saat dihover, sedangkan '::after' menambahkan elemen tambahan setelah tautan yang bisa kita atur tampilannya.  */
+  nav ul li a::after {
+    content: "";
+    /*  Mengatur konten dari elemen pseudo-elemen ::after menjadi kosong. */
+    width: 0;
+    /* lebar  elemen 0 */
+    height: 3px;
+    background: white;
+    position: absolute;
+    /* Mengatur posisi elemen pseudo-elemen ::after sebagai posisi absolut. Ini memungkinkan elemen tersebut ditempatkan relatif terhadap elemen <a>. */
+    left: 0;
+    bottom: -6px;
+    /* Mengatur jarak mjd -6px. Ini menggeser garis bawah sedikit ke atas, sehingga tersembunyi di bawah teks tautan.*/
+    transition: 0.5s;
+    /* Transisi durasi 0,5 detik*/
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  
+  .header-text {
+    padding-left: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column; digunakan untuk mengatur tata letak item-item dalam sebuah container dengan menggunakan tata letak fleksibel (flex layout) dalam arah vertikal (dari atas ke bawah).
+  
+    Ketika flex-direction diatur sebagai column, maka item-item di dalam container akan diatur secara vertikal. Artinya, item-item akan ditempatkan dari atas ke bawah dalam urutan yang ditentukan. Jarak antara item-item dapat diatur menggunakan properti lain seperti justify-content untuk mengatur penyebaran item secara vertikal atau align-items untuk mengatur penempatan item dalam sumbu lintang. */
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .header-text p {
+    font-size: 30px;
+    font-family:monospace;
+  }
+  
+  .header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    font-family:monospace;
+  }
+  
+  .header-text span {
+    color: white;
+  }
+  
+  /* ========== Medsos ========= */
+  .social-icons a {
+    margin-top: 30px;
+    text-decoration: none;
+    /* Menghilangkan dekorasi default dari tautan menggunakan  */
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    /* untuk penempatan sejajar */
+    transition: transform 0.5s;
+  }
+  
+  /* blm */
+  .social-icons a:hover {
+    color: white;
+    transform: translateY(-5px);
+  }
+  
+  /* ----------------------------------------- About Me --------------------------------- */
+  .about-me {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #353434;
+  }
+  
+  .about-me .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-left: 40px;
+    font-family:monospace;
+  }
+  
+  .about-me img {
+    margin-left: 8%;
+    width: 100%;
+    border-radius: 15px;
+    max-width: 200px;
+  }
+  
+  .about-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #a8a6a6;
+  }
+  
+  .about-me a {
+    width: 20px;
+  }
+  
+  /* ----------------------------------------- Contact Me --------------------------------- */
+  .contact-me {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* agar berada di tengah secara horizontal */
+    justify-content: center;
+    /*  center secaranvertikal */
+    flex-direction: column;
+    text-align: center;
+    background-color: #353434;
+  }
+  
+  .contact-me h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-me form {
+    width: 300px;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  .contact-me form input,
+  .contact-me form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .contact-me .sosmed {
+    margin-top: 30px;
+    color: #fff;
+    padding: 10px;
+    justify-items: space-between;
+    border: 1px solid #fff;
+    font-size: 25px;
+    border-radius: 20px;
+  }
+  
+  .contact-me .sosmed a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+  .contact-me .sosmed a:hover {
+    color: white;
+  }
+  
+  .contact-me form button {
+    padding: 10px 20px;
+    background: white;
+    border: none; 
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .contact-me form button:hover {
+    background: white;
+  }
+  
+  .footer {
+    text-align: center;
+  }
+  
+  .footer p {
+    text-align: center;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(39, 38, 38);
+    color: #434242;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  button:hover {
+    background-color: white;
+  }
+  
+  /*  */
