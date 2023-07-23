@@ -65,7 +65,7 @@ $(document).ready(function() {
 		  $("#mainpath,#maincircle").hide();
 		  show_level(level - 1);
 		} else {
-		  alert("Selesaikan level sebelumnya terlebih dahulu!");
+		  alert("Kamu harus memulai dari level 1 dahulu!");
 		}
 	  });
 	$("body").delegate(".blocks","click",function() {
@@ -158,6 +158,7 @@ function completed() {
 	}
 	$("body").css("background-color","#f0f0f0");
 	$("#lighton").show();
+	
 }
 function show_blocks() {
 	var paths = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72px" height="72px" viewBox="0 0 72 72" E="xMidYMid meet">';

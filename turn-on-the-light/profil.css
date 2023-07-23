@@ -236,7 +236,7 @@
   
   .contact-me form button {
     padding: 10px 20px;
-    background: white;
+    background: gray;
     border: none; 
     color: #fff;
     cursor: pointer;
@@ -244,7 +244,7 @@
   }
   
   .contact-me form button:hover {
-    background: white;
+    background: black;
   }
   
   .footer {

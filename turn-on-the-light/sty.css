@@ -3,8 +3,19 @@ body {
     font-size:25px;
     font-weight:bold;
     margin:0 0 0 0;
-    background-color:#f0f0f0;
     justify-content: center;
+    animation: changeBackgroundColor 4s linear infinite;
+}
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: #f0f0f0; /* Warna latar belakang awal */
+    }
+    50% {
+        background-color: rgb(167, 166, 166) /* Warna latar belakang pada tengah animasi */
+    }
+    100% {
+        background-color: #f0f0f0; /* Warna latar belakang kembali seperti awal */
+    }
 }
 * {
     -webkit-touch-callout:none;
@@ -15,27 +26,41 @@ body {
 }
 .nav {
     margin-top: auto;
-      position: fixed;
       width: 100%;
-      height: 5rem;
+      height: 4.3rem;
       display: grid;
       grid-template-columns: auto auto;
-     grid-template-rows: 5rem;
+     grid-template-rows: 4.3rem;
      justify-content: space-between;
      align-items: center;
      background-color: rgb(58, 57, 57);
-     z-index: 9999;
+     position: relative;
+    /* Add a higher z-index value to place the .nav above #username */
+    z-index: 27;
   }
   .nav div img {
      width: auto;
-     height: 5rem;
-     padding: 10px;
+     height: 4rem;
+     padding: 7px;
   }
+  .home-image {
+    height: 100%; /* Set the height to match the logo game's image */
+    vertical-align: middle;
+    margin-right: 1px;
+  }
+  .nav-button {
+    height: 5rem;
+     padding: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
 #game {
     position:relative;
-    margin:auto;
+    margin-left: 460px;
+    margin-top: 50px;
     width:360px;
     height:460px;
+    
 }
 .svg-container {
     display: flex;
