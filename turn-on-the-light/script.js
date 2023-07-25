@@ -1,4 +1,5 @@
 var playing = true;
+var highestCompletedLevel = 0;
 var levels = [
 	["122_0","242_90","242_0","242_-90","141_0"],
 	["122_180","343_0","","232_0","141_90","","122_90","242_-90","141_-90"],
@@ -65,7 +66,7 @@ $(document).ready(function() {
 		  $("#mainpath,#maincircle").hide();
 		  show_level(level - 1);
 		} else {
-		  alert("Kamu harus memulai dari level 1 dahulu!");
+		  alert("Maaf, anda harus memulai dari level 1.");
 		}
 	  });
 	$("body").delegate(".blocks","click",function() {
@@ -92,6 +93,8 @@ $(document).ready(function() {
 			}
 		}
 	});
+	$("#b_next").hide(); // Sembunyikan tombol "Next Level" saat awal permainan
+  show_level_buttons();
 	show_level_buttons();
 });
 function isLevelCompleted(level) {

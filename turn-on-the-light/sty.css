@@ -11,7 +11,7 @@ body {
         background-color: #f0f0f0; /* Warna latar belakang awal */
     }
     50% {
-        background-color: rgb(167, 166, 166) /* Warna latar belakang pada tengah animasi */
+        background-color: rgb(140, 140, 140) /* Warna latar belakang pada tengah animasi */
     }
     100% {
         background-color: #f0f0f0; /* Warna latar belakang kembali seperti awal */
