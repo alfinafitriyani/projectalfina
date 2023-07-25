@@ -66,7 +66,7 @@ $(document).ready(function() {
 		  $("#mainpath,#maincircle").hide();
 		  show_level(level - 1);
 		} else {
-		  alert("Maaf, anda harus memulai dari level 1.");
+		  alert("Maaf, anda harus memulai dari level 1!.");
 		}
 	  });
 	$("body").delegate(".blocks","click",function() {
