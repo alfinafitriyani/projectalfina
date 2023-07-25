@@ -69,8 +69,14 @@
 }
 
 .game-description h2 {
+   animation: changeColorAnimation 2s infinite;
    font-size: 1.5em;
    margin-bottom: 10px;
+}
+@keyframes changeColorAnimation {
+    0% { color: black; }
+    50% { color: white; }
+    100% { color: black; }
 }
 
 .game-description p {
@@ -96,17 +102,7 @@
    background-color: #000;
  }
 
- @keyframes buttonAnimation{
-   0%{
-      transform: scale(1);
-   }
-   50% {
-      transform: scale(0.9);
-   }
-   100% {
-      transform: scale(1);
-   }
- }
+ 
 
    
   /* ==FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER== */
